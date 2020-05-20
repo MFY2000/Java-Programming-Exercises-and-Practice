@@ -15,7 +15,7 @@ public class CreateFile {
             
             switch (key) {
                 case 1:
-                    fileName = new File("firstFile.txt");
+                    fileName = new File("C:\Users\MFY\Desktop\"+ 0+"Maju 2nd semsester"+"\Java-Programming-Exercises-and-Practice\Filing\Syntax\firstFile.txt");
                     break;
                 case 2:
                     scan.nextLine();
