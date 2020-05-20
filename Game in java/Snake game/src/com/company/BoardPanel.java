@@ -77,7 +77,7 @@ public class BoardPanel extends JPanel {
         this.tiles = new TileType[ROW_COUNT * COL_COUNT];
 
         setPreferredSize(new Dimension(COL_COUNT * TILE_SIZE, ROW_COUNT * TILE_SIZE));
-        setBackground(Color.BLACK);
+        setBackground(Color.white);
     }
 
     /**
@@ -142,7 +142,7 @@ public class BoardPanel extends JPanel {
          * The panel is one pixel too small to draw the bottom and right
          * outlines, so we outline the board with a rectangle separately.
          */
-        g.setColor(Color.DARK_GRAY);
+        g.setColor(Color.black);
         g.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
         for(int x = 0; x < COL_COUNT; x++) {
             for(int y = 0; y < ROW_COUNT; y++) {
@@ -155,7 +155,7 @@ public class BoardPanel extends JPanel {
          * Show a message on the screen based on the current game state.
          */
         if(game.isGameOver() || game.isNewGame() || game.isPaused()) {
-            g.setColor(Color.WHITE);
+            g.setColor(Color.black);
 
             /*
              * Get the center coordinates of the board.
@@ -209,7 +209,7 @@ public class BoardPanel extends JPanel {
              * on each side.
              */
             case Fruit:
-                g.setColor(Color.RED);
+                g.setColor(Color.YELLOW);
                 g.fillOval(x + 2, y + 2, TILE_SIZE - 4, TILE_SIZE - 4);
                 break;
 
@@ -218,7 +218,7 @@ public class BoardPanel extends JPanel {
              * entire tile.
              */
             case SnakeBody:
-                g.setColor(Color.GREEN);
+                g.setColor(Color.BLUE);
                 g.fillRect(x, y, TILE_SIZE, TILE_SIZE);
                 break;
 
@@ -228,11 +228,11 @@ public class BoardPanel extends JPanel {
              */
             case SnakeHead:
                 //Fill the tile in with green.
-                g.setColor(Color.GREEN);
+                g.setColor(Color.ORANGE);
                 g.fillRect(x, y, TILE_SIZE, TILE_SIZE);
 
                 //Set the color to black so that we can start drawing the eyes.
-                g.setColor(Color.BLACK);
+                g.setColor(Color.white);
 
                 /*
                  * The eyes will always 'face' the direction that the snake is
