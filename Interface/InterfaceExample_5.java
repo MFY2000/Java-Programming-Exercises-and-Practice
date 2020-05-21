@@ -70,9 +70,10 @@ interface BankAccount{
 
 class Details{
     String Name = "Muhammad Fahad";
-    String typeOfAccount = "assets";    
-    
+    String typeOfAccount = "assets";        
 }
+
+
 
 class Account extends Details implements BankAccount{
     public double Balance;
@@ -98,9 +99,6 @@ class Account extends Details implements BankAccount{
         Balance += balance;
     }
 }
-
-
-
 
 public class InterfaceExample_5{
     public static void main(String[] args) {
