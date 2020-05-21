@@ -1,5 +1,6 @@
 import java.util.Scanner;
-import java.util.jar.Attributes.Name;
+//more than one Inheritance using interface
+
 
 
 // abstract class is used for RateOfCurrence value changes
@@ -73,8 +74,7 @@ class Details{
     String typeOfAccount = "assets";        
 }
 
-
-
+//Multiple Inheritance using interface
 class Account extends Details implements BankAccount{
     public double Balance;
 
@@ -99,6 +99,8 @@ class Account extends Details implements BankAccount{
         Balance += balance;
     }
 }
+
+
 
 public class InterfaceExample_5{
     public static void main(String[] args) {
