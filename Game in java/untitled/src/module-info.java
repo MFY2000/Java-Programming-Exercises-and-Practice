@@ -3,5 +3,5 @@ module untitled {
     requires java.sql;
     requires javafx.controls;
 
-    opens sample;
+    opens Todo;
 }
