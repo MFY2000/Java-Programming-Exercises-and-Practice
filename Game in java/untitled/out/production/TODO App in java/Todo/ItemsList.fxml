@@ -11,7 +11,7 @@
    <children>
       <Button contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: whitesmoke;">
          <graphic>
-            <Circle fill="#fff459e7" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#90ff00" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
          </graphic>
          <HBox.margin>
             <Insets left="40.0" right="10.0" />

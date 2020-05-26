@@ -4,7 +4,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,6 +17,7 @@ public class Controller implements Initializable {
 
     @FXML
     private VBox itemsList = null;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -27,6 +30,10 @@ public class Controller implements Initializable {
                 e.printStackTrace();
             }
         }
+    }
 
+    @FXML
+    private void closeButton(){
+        System.out.println("Hi");
     }
 }
