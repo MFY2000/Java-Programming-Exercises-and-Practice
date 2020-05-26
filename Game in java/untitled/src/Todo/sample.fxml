@@ -2,46 +2,176 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-  <children>
-    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-      <items>
-        <AnchorPane style="-fx-background-color: #f3e6ff;">
+
+<AnchorPane maxHeight="-Infinity" fx:controller="Todo.Controller" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="659.0" prefWidth="265.0" style="-fx-background-color: #f3e6ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="211.0" fitWidth="311.0" pickOnBounds="true" preserveRatio="true" />
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="312.0" style="-fx-background-color: #f3e6ff;" text="Home">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Home_Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="312.0" style="-fx-background-color: #f3e6ff;" text="Filing Todo">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Home_Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="311.0" style="-fx-background-color: #f3e6ff;" text="Sql Todo">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Home_Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="333.0" layoutY="49.0" prefHeight="80.0" prefWidth="308.0" text="Todo App">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <HBox layoutX="325.0" layoutY="139.0" prefHeight="90.0" prefWidth="674.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="95.0" prefWidth="100.0">
                <children>
-                  <Button layoutX="85.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: #f3e6ff;" text="Home">
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/Home_Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <Label prefHeight="14.0" prefWidth="64.0" text="No of row" />
+                  <Label prefHeight="51.0" prefWidth="34.0" text="20" textFill="#ff0000ed">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
                </children>
-        </AnchorPane>
-        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
-          <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="546.0" prefWidth="666.0" />
-          </content>
-        </ScrollPane>
-      </items>
-    </SplitPane>
-    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
-      <children>
-        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
-      </children>
-      <padding>
-        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-      </padding>
-    </HBox>
-  </children>
-</VBox>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="95.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="14.0" prefWidth="64.0" text="No of row" />
+                  <Label prefHeight="51.0" prefWidth="34.0" text="20" textFill="#ffb700">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="95.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="14.0" prefWidth="64.0" text="No of row" />
+                  <Label prefHeight="51.0" prefWidth="34.0" text="20" textFill="#00ff6fdf">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="95.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="14.0" prefWidth="64.0" text="No of row" />
+                  <Label prefHeight="51.0" prefWidth="34.0" text="20" textFill="#00fff6">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox fx:id="itemsList" layoutX="333.0" layoutY="378.0" prefHeight="342.0" prefWidth="674.0" />
+      <HBox alignment="CENTER_LEFT" layoutX="333.0" layoutY="306.0" prefHeight="60.0" prefWidth="674.0" style="-fx-background-color: #f3e6ff;">
+         <children>
+            <Label prefHeight="26.0" prefWidth="56.0" text="Status">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="18.0" text="Id">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="85.0" text="Todo list">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label prefHeight="5.0" prefWidth="122.0" text="Date">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

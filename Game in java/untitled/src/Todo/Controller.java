@@ -1,4 +1,32 @@
 package Todo;
 
-public class Controller {
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.layout.VBox;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Controller implements Initializable {
+
+
+    @FXML
+    private VBox itemsList = null;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Node[] list = new Node[10];
+        for (int i = 0; i < list.length; i++) {
+            try {
+                list[i] = FXMLLoader.load(getClass().getResource("ItemsList.fxml"));
+                itemsList.getChildren().add(list[i]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 }
