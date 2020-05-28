@@ -25,10 +25,11 @@ public class Controller implements Initializable {
         for (int i = 0; i < list.length; i++) {
             try {
                 list[i] = FXMLLoader.load(getClass().getResource("ItemsList.fxml"));
-                itemsList.getChildren().add(list[i]);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+//            list[i] =  new Button("My Button"+i);
+            itemsList.getChildren().add(list[i]);
         }
     }
 
