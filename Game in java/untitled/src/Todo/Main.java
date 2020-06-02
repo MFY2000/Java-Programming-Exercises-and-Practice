@@ -11,7 +11,7 @@ public class Main extends Application {
     private double x,y;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("addcourse.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Dropdown.fxml"));
         primaryStage.initStyle(StageStyle.UNDECORATED);
 
         root.setOnMousePressed(mouseEvent -> {
