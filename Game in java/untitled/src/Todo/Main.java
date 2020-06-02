@@ -11,7 +11,7 @@ public class Main extends Application {
     private double x,y;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("addcourse.fxml"));
         primaryStage.initStyle(StageStyle.UNDECORATED);
 
         root.setOnMousePressed(mouseEvent -> {
@@ -23,9 +23,11 @@ public class Main extends Application {
             primaryStage.setX(mouseEvent.getSceneX() - x);
             primaryStage.setY(mouseEvent.getSceneY() - y);
         });
-//        scene.getStylesheets().add(Main.class.getResource("Combobox.css").toExternalForm());
 
-        primaryStage.setScene(new Scene(root));
+        Scene scene = new  Scene(root);
+        scene.getStylesheets().add(Main.class.getResource("Combobox.css").toExternalForm());
+
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

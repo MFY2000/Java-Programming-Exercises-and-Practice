@@ -2,7 +2,7 @@
 
 .combo-box-popup .list-view {
 
-    -fx-color: red;
+    -fx-color:red ;/*-fx-color */
     -fx-background-color:
             derive(-fx-color,-40%),
             derive(-fx-color,100%),

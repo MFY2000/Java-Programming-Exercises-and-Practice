@@ -2,43 +2,37 @@ package Todo;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
-import javafx.scene.control.Separator;
-import javafx.scene.control.Tooltip;
 
-
-
-public class Optionlist implements Initializable {
+public class Dropdown implements Initializable {
+    ObservableList<String> ChoiceList;
+    public ComboBox combobox;
+    @FXML
+    AnchorPane pinbox = new AnchorPane();
+    @FXML
+    PasswordField pincode = new PasswordField();
 
     private Connection con;
     private Statement sc;
     private ResultSet res;
 
-    @FXML
-    public ChoiceBox Choice;
-    ObservableList<String> ChoiceList = FXCollections.observableArrayList("1","2","3");
-    public ComboBox combobox;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        databaseChoicelist();
-//        Choice.setTooltip(new Tooltip("Select the language"));
-//
-//        combobox.getItems().add("Choice 1");
-//        combobox.getItems().add("Choice 2");
-//        combobox.getItems().add("Choice 3");
-
-
+        databaseChoicelist();
         combobox.setItems(ChoiceList);
-        combobox.setValue("MM");
+        combobox.setValue("Feild");
     }
 
     private void databaseChoicelist(){
@@ -55,20 +49,46 @@ public class Optionlist implements Initializable {
     }
 
     private void showdata(){
+        List<String> Feild = new ArrayList<String>();
 
-        String[] Feild = new String[10];
         try {
             String query = "select * from subjectlist";
             res = sc.executeQuery(query);
-            int i=0;
+
             while (res.next()){
-                Feild[i] = res.getString("Field");
-                i++;
+                Feild.add(res.getString("Field"));
             }}
         catch (Exception e){
             System.out.println("Error : "+e);
         }
         ChoiceList = FXCollections.observableArrayList(Feild);
     }
+
+    public void EnterPin(ActionEvent event){
+      pinbox.setVisible(true);
+    }
+
+    public void checkingPin(ActionEvent event){
+
+            String query = "SELECT * FROM `subjectlist` WHERE `Field` LIKE "+'"'+combobox.getValue()+'"'+" ";
+        try {
+            res = sc.executeQuery(query);
+            res.next();
+            String pin = res.getString("Pincode");
+
+            if (pin.equals(pincode.getText())){
+                System.out.println("Welcome");
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+    }
+
+
+
+
 
 }
