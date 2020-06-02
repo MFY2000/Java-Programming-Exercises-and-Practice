@@ -4,9 +4,9 @@
 
     -fx-color: -fx-base;
     -fx-background-color:
-            derive(-fx-color,-40%),
-            derive(-fx-color,100%),
-            linear-gradient(to bottom, derive(-fx-color, 15%) 0%, derive(-fx-color, 40%) 15%, derive(-fx-color,55%) 75%, derive(-fx-color,15%) 100%);
+            derive(-fx-color,-30%);
+            /*derive(-fx-color,100%);*/
+            /*linear-gradient(to bottom, derive(-fx-color, 15%) 0%, derive(-fx-color, 40%) 15%, derive(-fx-color,55%) 75%, derive(-fx-color,15%) 100%);*/
 
     -fx-background-insets: 0, 1, 2;
     -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
